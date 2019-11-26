@@ -1,0 +1,11 @@
+version: '2'
+services:
+  pluralsightopenfoodfactsbatchjob-postgresql:
+    image: postgres:11.5
+    volumes:
+      - ~/volumes/PluralsightOpenFoodFactsBatchJob/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=PluralsightOpenFoodFactsBatchJob
+      - POSTGRES_PASSWORD=
+    ports:
+      - 5432:5432
